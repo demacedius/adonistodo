@@ -14,7 +14,12 @@ export default class TodosController {
 
     public async store({}: HttpContextContract) {}
 
-    public async show({}: HttpContextContract) {}
+    public async show({params}: HttpContextContract) {
+        const todo = await Todo.find(params.id)
+        return View.render('todos/show',{
+            todo
+        })
+    }
 
     public async edit({}: HttpContextContract) {}
 

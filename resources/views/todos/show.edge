@@ -6,12 +6,8 @@
 
         <h1 class="text-center text-4xl font-bold underline pt-4">Listes des todos</h1>
     
-        <ul class="pt-4 ">
-            @each(todo in todos)
-                <li class="py-3 bg-lime-400 my-4 rounded-xl px-4"><a href="{{route('todos/show', [todo.id])}}" class="hover:text-white">{{todo.name}}</a></li>
-            @end
+        <ul class="bg-lime-400 py-4 px-4 rounded-xl mt-4">
+            <h2 class="text-xl">{{todo.name}}</h2>
         </ul>
-
-     
     </div>
 @end
